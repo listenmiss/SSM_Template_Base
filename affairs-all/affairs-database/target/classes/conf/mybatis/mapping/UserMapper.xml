@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间: 对应接口的包名+接口名 -->
+<mapper namespace="cn.com.catcher.vision.affairs.dao.UserDao">
+    <!-- 通过Id查找 -->
+    <select id="findUserById" resultType="User">
+        select * from users u where id=#{id}
+    </select>
+    
+        <!-- 通过Id查找 -->
+    <select id="findUserByName" parameterType="String" resultType="User">
+        select * from users u where name = #{name}
+    </select>
+    
+    <!-- 查询所有的User -->
+    <select id="findUserList" resultType="User">
+        SELECT u.id, u.name, u.password, u.age FROM users u;
+    </select>
+    <!-- 添加 -->
+    <insert id="addUser" parameterType="User">
+        insert into users values(#{name},#{password},#{age})
+    </insert>
+    <!-- 删除 -->
+    <delete id="delUser" >
+        DELETE FROM users WHERE id=#{id}
+    </delete>
+    <!-- 更新 -->
+    <update id="updateUser">
+        UPDATE users SET name=#{name},password=#{password},age=#{age} WHERE id=#{id}
+    </update>
+</mapper>
