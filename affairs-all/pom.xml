@@ -8,7 +8,7 @@
   <modules>
   	<module>affairs-database</module>
   	<module>affairs-api</module>
-  	<module>affairs-commons-util</module>
+  	<module>affairs-commons</module>
   </modules>
   
   <properties>

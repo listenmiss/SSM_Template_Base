@@ -14,7 +14,7 @@
   
   <properties>
 	<affairs-database.version>0.0.1-SNAPSHOT</affairs-database.version>
-	<affairs-common.version>0.0.1-SNAPSHOT</affairs-common.version>
+	<affairs-commons.version>0.0.1-SNAPSHOT</affairs-commons.version>
   </properties>
   
   
@@ -28,7 +28,7 @@
     <dependency>
     	<groupId>cn.com.catcher.vision.affairs</groupId>
     	<artifactId>affairs-commons</artifactId>
-    	<version>${affairs-common.version}</version>
+    	<version>${affairs-commons.version}</version>
     </dependency>
   </dependencies>
   <build>
